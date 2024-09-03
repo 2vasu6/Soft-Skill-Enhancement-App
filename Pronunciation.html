@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation Lesson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pronunciation-guide {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .pronunciation-guide h2 {
+            margin-bottom: 10px;
+        }
+        .pronunciation-guide p {
+            margin-bottom: 10px;
+        }
+        .pronunciation-guide audio {
+            margin-top: 10px;
+        }
+        .exercise {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .exercise h2 {
+            margin-bottom: 10px;
+        }
+        .exercise p {
+            margin-bottom: 10px;
+        }
+        .exercise ul {
+            margin: 10px 0;
+        }
+        .exercise textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Pronunciation Lesson</div>
+    <div class="main-content">
+        <div class="pronunciation-guide">
+            <h2>Pronunciation Guide</h2>
+            <p>In this lesson, we will practice the pronunciation of various words. Listen to the audio and practice repeating the words aloud.</p>
+
+            <h3>1. Word: <strong>Appreciate</strong></h3>
+            <p>Pronunciation: /əˈpriː.ʃi.eɪt/</p>
+            <p>Example Sentence: I really appreciate your help with the project.</p>
+            <audio controls>
+                <source src="audio/appreciate.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>2. Word: <strong>Phenomenon</strong></h3>
+            <p>Pronunciation: /fəˈnɒm.ɪ.nən/</p>
+            <p>Example Sentence: The Northern Lights are a natural phenomenon.</p>
+            <audio controls>
+                <source src="audio/phenomenon.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>3. Word: <strong>Exaggerate</strong></h3>
+            <p>Pronunciation: /ɪɡˈzædʒ.ə.reɪt/</p>
+            <p>Example Sentence: She tends to exaggerate her stories to make them more interesting.</p>
+            <audio controls>
+                <source src="audio/exaggerate.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Add more words as needed -->
+        </div>
+
+        <div class="exercise">
+            <h2>Exercise 1: Pronunciation Practice</h2>
+            <p>Read each pronunciation guide and practice repeating the word aloud. Try recording yourself and comparing your pronunciation with the provided guides.</p>
+            <ul>
+                <li><strong>Appreciate</strong> - /əˈpriː.ʃi.eɪt/</li>
+                <li><strong>Phenomenon</strong> - /fəˈnɒm.ɪ.nən/</li>
+                <li><strong>Exaggerate</strong> - /ɪɡˈzædʒ.ə.reɪt/</li>
+                <!-- Add more words as needed -->
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <h2>Exercise 2: Fill in the Blanks</h2>
+            <p>Complete the sentences with the correct pronunciation of the word provided:</p>
+            <ul>
+                <li>1. She was trying to __________ her excitement for the surprise party. (exaggerate)</li>
+                <li>2. The __________ of the new policy will be seen over time. (phenomenon)</li>
+                <li>3. I want to __________ how grateful I am for your support. (appreciate)</li>
+                <!-- Add more sentences as needed -->
+            </ul>
+            <p><strong>Answers:</strong></p>
+            <ul>
+                <li>1 - exaggerate</li>
+                <li>2 - phenomenon</li>
+                <li>3 - appreciate</li>
+            </ul>
+        </div>
+
+        <div class="exercise">
+            <h2>Exercise 3: Sentence Creation</h2>
+            <p>Create your own sentences using the following words:</p>
+            <ul>
+                <li>Appreciate</li>
+                <li>Phenomenon</li>
+                <li>Exaggerate</li>
+            </ul>
+            <div>
+                <textarea placeholder="Write your sentences here..."></textarea>
+            </div>
+        </div>
+
+        <a href="dashboard.html" class="button">back to dashboard</a>
+    </div>
+</body>
+</html>

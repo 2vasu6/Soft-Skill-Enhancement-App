@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bg.jpeg); /* Replace with your image URL */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-attachment: fixed; /* Keep the image fixed in place during scrolling */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 500px; /* Adjust as needed */
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            padding: 20px; /* Add some padding inside the table for better spacing */
+        }
+        td {
+            padding: 10px;
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .center {
+            text-align: center;
+        }
+        .buttons td {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px; /* Makes the button oval */
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin: 0 5px; /* Space between buttons */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        button:active {
+            background-color: #397d34; /* Even darker green on click */
+        }
+    </style>
+</head>
+<body>
+    <form id="password-form" action="/submit" method="post">
+        <table>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="Enter name" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">New Password:</label></td>
+                <td>
+                    <input type="password" id="password" name="password" minlength="8" placeholder="Enter new password" required>
+                    <span id="password-error" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="confirm-password">Confirm Password:</label></td>
+                <td><input type="password" id="confirm-password" name="confirm-password" minlength="8" placeholder="Confirm new password" required></td>
+            </tr>
+            <tr class="buttons">
+                <td colspan="2">
+                    <button type="button" id="submit-button">Submit</button>
+                    <button type="button" id="reset-button">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const form = document.getElementById('password-form');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const errorSpan = document.getElementById('password-error');
+        const submitButton = document.getElementById('submit-button');
+        const resetButton = document.getElementById('reset-button');
+
+        function validatePassword() {
+            if (passwordInput.validity.tooShort) {
+                errorSpan.textContent = 'Password must be at least 8 characters long.';
+            } else if (passwordInput.value !== confirmPasswordInput.value) {
+                errorSpan.textContent = 'Passwords do not match.';
+            } else {
+                errorSpan.textContent = '';
+            }
+        }
+
+        function validateForm() {
+            validatePassword();
+            
+            const nameInput = document.getElementById('name');
+            if (!nameInput.value || !passwordInput.value || !confirmPasswordInput.value) {
+                alert('Please fill in all required fields.');
+                return false; // Prevent form submission
+            } else if (passwordInput.value !== confirmPasswordInput.value) {
+                alert('Passwords do not match.');
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission if all validations pass
+        }
+
+        submitButton.addEventListener('click', function() {
+            if (validateForm()) {
+                window.location.href = 'dashboard.html'; // Replace with your actual page URL
+            }
+        });
+
+        resetButton.addEventListener('click', function() {
+            window.location.href = 'login.html'; // Replace with your actual page URL
+        });
+
+        passwordInput.addEventListener('input', validatePassword);
+        confirmPasswordInput.addEventListener('input', validatePassword);
+    </script>
+</body>
+</html>
+

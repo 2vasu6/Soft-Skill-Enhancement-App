@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> English Training Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background-image: url(bg.jpeg);
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dashboard-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 280px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 20px;
+        }
+        .card a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">English Training Dashboard</div>
+    <div class="main-content">
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Vocabulary Lesson</h3>
+                <p>Expand your vocabulary with interactive lessons.</p>
+                <a href="vocabulary.html">Start Vocabulary Lesson</a>
+            </div>
+            <div class="card">
+                <h3>Pronunciation Lesson</h3>
+                <p>Improve your pronunciation skills through practice.</p>
+                <a href="Pronunciation.html">Start Pronunciation Lesson</a>
+            </div>
+            <div class="card">
+                <h3>Speech Lesson</h3>
+                <p>Enhance your speaking abilities with guided lessons.</p>
+                <a href="Speech.html">Start Speech Lesson</a>
+            </div>
+            <div class="card">
+                <h3>Practice Test</h3>
+                <p>Test your knowledge and track your progress.</p>
+                <a href="Practice Test.html">Take Practice Test</a>
+            </div>
+            <div class="card">
+                <h3>Test Report</h3>
+                <p>Review your test results and identify areas for improvement.</p>
+                <a href="Test Report.html">View Test Report</a>
+            </div>
+            <div class="card">
+                <h3>Learning Path</h3>
+                <p>Plan your learning journey and set new goals.</p>
+                <a href="Learning Path.html">View Learning Path</a>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="progressChart"></canvas>
+        </div>
+    </div>
+   
+</body>
+</html>

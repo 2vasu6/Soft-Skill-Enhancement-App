@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .report {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Test Report</div>
+    <div class="main-content">
+        <div class="report">
+            <h2>Your Test Results</h2>
+            <p id="score"></p>
+            <p id="answers"></p>
+        </div>
+
+        <a href="Practice Test.html" class="button">Back to Test</a>
+    </div>
+    
+    <script>
+        // Retrieve query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Define correct answers
+        const correctAnswers = {
+            q1: 'A',
+            q2: 'went',
+            q3: 'had a picnic',
+            q4: 'A',
+            q5: 'were',
+            q6: 'visits the local library'
+        };
+
+        let score = 0;
+
+        // Check answers and calculate score
+        for (let [key, correctAnswer] of Object.entries(correctAnswers)) {
+            let userAnswer = urlParams.get(key);
+            if (userAnswer === correctAnswer || userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                score++;
+            }
+        }
+
+        // Display score
+        document.getElementById('score').textContent = `Your score: ${score} / ${Object.keys(correctAnswers).length}`;
+
+        // Display user answers
+        let answersHtml = '<h3>Your Answers:</h3><ul>';
+        for (let [key, correctAnswer] of Object.entries(correctAnswers)) {
+            let userAnswer = urlParams.get(key);
+            if (userAnswer) {
+                answersHtml += `<li><strong>Question ${key.slice(1)}:</strong> ${userAnswer}</li>`;
+            } else {
+                answersHtml += `<li><strong>Question ${key.slice(1)}:</strong> No answer provided</li>`;
+            }
+        }
+        answersHtml += '</ul>';
+        document.getElementById('answers').innerHTML = answersHtml;
+    </script>
+</body>
+</html>

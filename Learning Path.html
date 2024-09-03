@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size:auto;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .learning-path {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .path-step {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .path-step h2 {
+            margin-bottom: 10px;
+        }
+        .path-step p {
+            margin-bottom: 10px;
+        }
+        .path-step a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .path-step a:hover {
+            text-decoration: underline;
+        }
+        .progress {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Your Learning Path</div>
+    <div class="main-content">
+        <div class="learning-path">
+            <div class="path-step">
+                <h2>Step 1: Vocabulary Building</h2>
+                <p>Start by expanding your vocabulary with essential words and phrases.</p>
+                <a href="vocabulary-lesson.html">Go to Vocabulary Lessons</a>
+            </div>
+            <div class="path-step">
+                <h2>Step 2: Pronunciation Practice</h2>
+                <p>Focus on improving your pronunciation with interactive exercises.</p>
+                <a href="pronunciation.html">Go to Pronunciation Lessons</a>
+            </div>
+            <div class="path-step">
+                <h2>Step 3: Speech Lessons</h2>
+                <p>Work on your speech skills and fluency with guided lessons.</p>
+                <a href="speech-lesson.html">Go to Speech Lessons</a>
+            </div>
+            <div class="path-step">
+                <h2>Step 4: Practice Tests</h2>
+                <p>Test your knowledge and track your progress with practice tests.</p>
+                <a href="practice-test.html">Take a Practice Test</a>
+            </div>
+            <div class="path-step">
+                <h2>Step 5: Review and Report</h2>
+                <p>Review your performance and get detailed feedback on your progress.</p>
+                <a href="test-report.html">View Your Test Report</a>
+            </div>
+            
+        </div>
+
+        <div class="progress">
+            <h2>Track Your Progress</h2>
+            <p>Keep track of your learning progress and milestones. Ensure you are completing each step as you advance through your learning path.</p>
+        </div>
+        <a href="dashboard.html" class="button">Back to Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Practice Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .question {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            margin-bottom: 10px;
+        }
+        .question p {
+            margin-bottom: 10px;
+        }
+        .question input[type="text"],
+        .question textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">English Practice Test</div>
+    <div class="main-content">
+        <form action="Test Report.html" method="GET">
+            <div class="question">
+                <h2>1. Vocabulary Question</h2>
+                <p>Choose the correct definition for the word "meticulous".</p>
+                <label>
+                    <input type="radio" name="q1" value="A">
+                    A. Showing great attention to detail; very careful and precise.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="B">
+                    B. Not showing care or attention.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="C">
+                    C. Easily annoyed or upset.
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="D">
+                    D. Feeling or showing gratitude.
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>2. Grammar Question</h2>
+                <p>Complete the sentence with the correct form of the verb in parentheses: "She ____ (go) to the store yesterday."</p>
+                <input type="text" name="q2" placeholder="Enter your answer here">
+            </div>
+
+            <div class="question">
+                <h2>3. Comprehension Question</h2>
+                <p>Read the passage and answer the question:</p>
+                <p>"John went to the park after school. He played soccer with his friends and then had a picnic." </p>
+                <p>What did John do after playing soccer?</p>
+                <textarea name="q3" rows="3" placeholder="Enter your answer here"></textarea>
+            </div>
+
+            <div class="question">
+                <h2>4. Vocabulary Question</h2>
+                <p>Choose the correct synonym for the word "quintessential".</p>
+                <label>
+                    <input type="radio" name="q4" value="A">
+                    A. Typical
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="B">
+                    B. Rare
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="C">
+                    C. Minor
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="D">
+                    D. Unusual
+                </label>
+            </div>
+
+            <div class="question">
+                <h2>5. Grammar Question</h2>
+                <p>Choose the correct word to complete the sentence: "Neither the teacher nor the students ____ (was/were) aware of the change in schedule."</p>
+                <input type="text" name="q5" placeholder="Enter your answer here">
+            </div>
+
+            <div class="question">
+                <h2>6. Comprehension Question</h2>
+                <p>Read the passage and answer the question:</p>
+                <p>"Mary enjoys reading books about different cultures. She often visits the local library to find new titles." </p>
+                <p>What does Mary do to find new books?</p>
+                <textarea name="q6" rows="3" placeholder="Enter your answer here"></textarea>
+            </div>
+
+            <input type="submit" value="Submit Answers" class="button">
+        </form>
+    </div>
+</body>
+</html>

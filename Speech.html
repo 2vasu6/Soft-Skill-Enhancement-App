@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Lesson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .speech-guide {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .speech-guide h2 {
+            margin-bottom: 10px;
+        }
+        .speech-guide p {
+            margin-bottom: 10px;
+        }
+        .speech-guide audio {
+            margin-top: 10px;
+        }
+        .exercise {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .exercise h2 {
+            margin-bottom: 10px;
+        }
+        .exercise p {
+            margin-bottom: 10px;
+        }
+        .exercise textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Speech Lesson</div>
+    <div class="main-content">
+        <div class="speech-guide">
+            <h2>Speech Practice Guide</h2>
+            <p>In this lesson, we will practice various speech techniques, including pronunciation, intonation, and fluency. Listen to the example speeches and practice delivering them yourself.</p>
+            
+            <h3>Example Speech 1</h3>
+            <p><strong>Title:</strong> The Importance of Public Speaking</p>
+            <p><strong>Text:</strong> Public speaking is a vital skill in today's world. Whether you're presenting a business proposal, delivering a speech at a wedding, or speaking at a community event, effective public speaking can significantly impact your success.</p>
+            <audio controls>
+                <source src="audio/public-speaking.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Example Speech 2</h3>
+            <p><strong>Title:</strong> Overcoming Challenges</p>
+            <p><strong>Text:</strong> Challenges are a natural part of life. How we respond to them often defines our path. By facing challenges head-on and learning from them, we can grow stronger and more resilient.</p>
+            <audio controls>
+                <source src="audio/overcoming-challenges.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Add more speeches as needed -->
+        </div>
+
+        <div class="exercise">
+            <h2>Exercise 1: Speech Practice</h2>
+            <p>Listen to the example speeches and practice delivering them aloud. Pay attention to pronunciation, intonation, and pacing. Try recording yourself and compare it with the example audio.</p>
+        </div>
+
+        <div class="exercise">
+            <h2>Exercise 2: Write and Practice Your Own Speech</h2>
+            <p>Write a short speech on a topic of your choice. Use the following prompts to guide your writing:</p>
+            <ul>
+                <li>Introduce the topic and state your main points.</li>
+                <li>Provide examples or anecdotes to support your points.</li>
+                <li>Conclude with a summary or call to action.</li>
+            </ul>
+            <textarea placeholder="Write your speech here..."></textarea>
+        </div>
+
+        <div class="exercise">
+            <h2>Exercise 3: Record and Review</h2>
+            <p>Record yourself delivering the speech you wrote in the previous exercise. Focus on the following aspects:</p>
+            <ul>
+                <li>Clarity of speech</li>
+                <li>Proper intonation</li>
+                <li>Effective pacing</li>
+            </ul>
+            <p>Review your recording and make notes on areas for improvement.</p>
+        </div>
+
+        <a href="dashboard.html" class="button">back to dashboard</a>
+    </div>
+</body>
+</html>
